@@ -134,7 +134,7 @@ const quizQuestions = [
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('notes'); // 'notes' or 'quiz'
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState<Record<number, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -146,7 +146,7 @@ export default function App() {
     return () => styleSheet.remove();
   }, []);
 
-const handleAnswerChange = (questionId, value) => {
+const handleAnswerChange = (questionId: number, value: string) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }));
   };
 
@@ -172,7 +172,7 @@ const handleAnswerChange = (questionId, value) => {
     setScore(0);
   };
 
-  const checkFillAnswer = (userAns, correctAns) => {
+  const checkFillAnswer = (userAns: string, correctAns: string) => {
     if (!userAns) return false;
     return userAns.toLowerCase().trim() === correctAns.toLowerCase();
   };
@@ -241,7 +241,7 @@ const handleAnswerChange = (questionId, value) => {
 
             <div className="space-y-10">
               {quizQuestions.map((q, index) => {
-                const userAnswer = answers[q.id] || '';
+                const userAnswer : string = answers[q.id] || '';
                 let isCorrect = false;
                 if (isSubmitted) {
                    isCorrect = q.type === 'mcq' 
@@ -278,7 +278,7 @@ const handleAnswerChange = (questionId, value) => {
                       </p>
 
                       {/* Múltipla Escolha */}
-                      {q.type === 'mcq' && (
+                      {q.type === 'mcq' && q.options && (
                         <div className="space-y-3">
                           {q.options.map((opt, i) => (
                             <label key={i} className={`flex items-start gap-3 p-3 rounded-lg cursor-pointer transition-colors border-2 ${
