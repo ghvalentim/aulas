@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import { BookOpen, CheckCircle2, Edit3, XCircle, ArrowRight, RotateCcw } from 'lucide-react';
 
 const doodleStyles = `
