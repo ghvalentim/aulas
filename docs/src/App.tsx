@@ -3,7 +3,7 @@ import { BookOpen, CheckCircle2, Edit3, XCircle, ArrowRight, RotateCcw, Home, Lo
 import { createClient } from '@supabase/supabase-js'
 
 // Estes dados são teus e ficam no painel do Supabase!
-const supabaseUrl = '[https://zmghsxblcdtpqeitwyfa.supabase.co](https://zmghsxblcdtpqeitwyfa.supabase.co)'
+const supabaseUrl = '[https://zmghsxblcdtpqeitwyfa.supabase.co/rest/v1/](https://zmghsxblcdtpqeitwyfa.supabase.co/rest/v1/)'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InptZ2hzeGJsY2R0cHFlaXR3eWZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NTU4NzUsImV4cCI6MjEwMDEzMTg3NX0.0UtZ4wEdERpfFIeuxwFMfakZo3Alv0-W4Fg7Lw9G-JA' 
 const supabase = createClient(supabaseUrl, supabaseKey)
 
