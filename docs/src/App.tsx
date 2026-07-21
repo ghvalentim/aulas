@@ -304,6 +304,11 @@ export default function App() {
                     <Server size={20} className="text-slate-400"/> 3. AJAX e Interatividade
                   </button>
                 </li>
+                <li>
+                  <button onClick={() => handleStartQuiz('sessoes-cookies', 'Sessões & Cookies')} className="index-link flex items-center gap-2 w-full text-left">
+                    <Server size={20} className="text-slate-400"/> 4. Sessões e Cookies
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
